@@ -243,7 +243,6 @@ include "header.php";
 							if(isset($_GET['keyword'])):
 							$keyword = $_GET['keyword'];
 							$search = $product->search($keyword);
-							echo "Result:".count($search);
 							foreach($search as $value):
 							?>
 							<!-- product -->
