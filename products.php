@@ -236,6 +236,7 @@
 
 						<!-- store products -->
 						<div class="row">
+<<<<<<< HEAD
 							
 							<?php 
 							if(isset($_GET['manu_id'])):
@@ -252,21 +253,47 @@
                              $get3ProductsByManu = $product->get3ProductsByManu($manu_id,$page,$perPage);
                             foreach($getProductsByManu as $value):
 							 ?>
+=======
+							<?php
+							if(isset($_GET['manu_id'])):
+							$manu_id = $_GET['manu_id'];
+							$getProductsByManu = $product->getProductsByManu($manu_id);
+                            //Hien thi 3 san pham tren 1 trang
+                            $perPage = 3;
+                            //Lay so trang tren thanh dia chi
+                            $page = isset($Get['page'])?$_GET['page']:1;
+                            //tinh tong so dong
+                            $total = count($getProductsByManu);
+                            //Lay duong dan den file hien hanh
+                            $url = $_SERVER['PHP_SELF']."?manu_id=".$manu_id;
+                            $get3ProductsByManu = $product->get3ProductsByManu($manu_id, $page, $perPage);
+							foreach($get3ProductsByManu as $value):
+							?>
+>>>>>>> 6109097c639b3fb8f8742a161333260c69f8a446
 							<!-- product -->
 							<div class="col-md-4 col-xs-6">
 								<div class="product">
 									<div class="product-img">
+<<<<<<< HEAD
 									
 										<img src="./img/<?php echo $value['image']?>" alt="">
 										<div class="product-label">
 											<span class="sale">-30%</span>
 											<span class="new">NEW</span>
 										</div>
+=======
+										<img src="./img/<?php echo $value['image']?>" alt="">
+										
+>>>>>>> 6109097c639b3fb8f8742a161333260c69f8a446
 									</div>
 									<div class="product-body">
 										<p class="product-category">Category</p>
 										<h3 class="product-name"><a href="#"><?php echo $value['name'] ?></a></h3>
+<<<<<<< HEAD
 										<h4 class="product-price"><?php echo $value['price'] ?> </h4>
+=======
+										<h4 class="product-price"><?php echo number_format($value['price']) ?></del></h4>
+>>>>>>> 6109097c639b3fb8f8742a161333260c69f8a446
 										<div class="product-rating">
 											<i class="fa fa-star"></i>
 											<i class="fa fa-star"></i>
@@ -286,7 +313,13 @@
 								</div>
 							</div>
 							<!-- /product -->
+<<<<<<< HEAD
                                <?php endforeach; ?>
+=======
+							<?php endforeach; ?>
+
+							
+>>>>>>> 6109097c639b3fb8f8742a161333260c69f8a446
 						</div>
 						<!-- /store products -->
 
@@ -294,7 +327,11 @@
 						<div class="store-filter clearfix">
 							<span class="store-qty">Showing 20-100 products</span>
 							<ul class="store-pagination">
+<<<<<<< HEAD
 							<?php echo $product->paginate($url, $total, $perPage)?>
+=======
+								<?php echo $product -> paginate($url, $total, $perPage) ?>
+>>>>>>> 6109097c639b3fb8f8742a161333260c69f8a446
 							</ul>
 						</div>
 						<!-- /store bottom filter -->
@@ -307,6 +344,10 @@
 			<!-- /container -->
 		</div>
 		<!-- /SECTION -->
+<<<<<<< HEAD
 
 		
 		<?php include "footer.html"; ?>
+=======
+<?php include "footer.html"; ?>
+>>>>>>> 6109097c639b3fb8f8742a161333260c69f8a446

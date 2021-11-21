@@ -1,6 +1,7 @@
 <?php
-include "header.php";
+include "header.php"
 ?>
+
 
 		<!-- SECTION -->
 		<div class="section">
@@ -84,9 +85,10 @@ include "header.php";
 						<div class="row">
 							<div class="products-tabs">
 								<!-- tab -->
+                                
 								<div id="tab1" class="tab-pane active">
 									<div class="products-slick" data-nav="#slick-nav-1">
-										<?php foreach($getAllProducts as $value):?>
+                                    <?php foreach($getAllProducts as $value):?>
 										<!-- product -->
 										<div class="product">
 											<div class="product-img">
@@ -117,12 +119,11 @@ include "header.php";
 												<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> add to cart</button>
 											</div>
 										</div>
-										<!-- /product -->
-                                        <?php endforeach?>
-										
+                                        <?php endforeach ?>
 									</div>
 									<div id="slick-nav-1" class="products-slick-nav"></div>
 								</div>
+                                
 								<!-- /tab -->
 							</div>
 						</div>
@@ -664,5 +665,7 @@ include "header.php";
 		</div>
 		<!-- /SECTION -->
 
-		<?php include "footer.html";
-		 ?>
+		<?php include "footer.html"?>
+
+	</body>
+</html>
