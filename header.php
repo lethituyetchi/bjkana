@@ -4,9 +4,9 @@ require "models/db.php";
 require "models/product.php";
 require "models/manufacture.php";
 $manu = new Manufacture;
+
 $product = new Product;
 $getAllProducts = $product->getAllProducts();
-$getProductById = $product->getProductById();
 
 //var_dump($getAllProducts);
 ?>
@@ -60,7 +60,7 @@ $getProductById = $product->getProductById();
 					</ul>
 					<ul class="header-links pull-right">
 						<li><a href="#"><i class="fa fa-dollar"></i> USD</a></li>
-						<li><a href="#"><i class="fa fa-user-o"></i> My Account</a></li>
+						<li><a href="login.php"><i class="fa fa-user-o"></i> My Account</a></li>
 					</ul>
 				</div>
 			</div>
@@ -184,11 +184,11 @@ $getProductById = $product->getProductById();
 					<ul class="main-nav nav navbar-nav">
 						<li class="active"><a href="#">Home</a></li>
 						<?php
-						$getAllManu = $manu->getAllManu();
+						$getAllManu =$manu->getAllManu();
 						foreach($getAllManu as $value):
 						?>
-						<li><a href="products.php?manu_id=<?php echo $value['manu_id']?>"><?php echo $value['manu_name'] ?></a></li>
-						<?php endforeach;?>
+						<li><a href="products.php?manu_id=<?php echo $value['manu_id'] ?>"><?php echo $value['manu_name'] ?></a></li>
+						<?php endforeach; ?>
 					</ul>
 					<!-- /NAV -->
 				</div>
