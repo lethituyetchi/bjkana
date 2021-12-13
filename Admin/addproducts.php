@@ -1,100 +1,88 @@
-<?php include "header.php"?>
-
+  <?php include "header.php" ?>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    <section class="content-header">
+    <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Product Add</h1>
-          </div>
+            <h1 class="m-0">Starter Page</h1>
+          </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Project Add</li>
+              <li class="breadcrumb-item active">Starter Page</li>
             </ol>
-          </div>
-        </div>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
       </div><!-- /.container-fluid -->
-    </section>
+    </div>
+    <!-- /.content-header -->
 
     <!-- Main content -->
-    <section class="content">
-      <form action="add.php" method="post" enctype="multipart/form-data">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="card card-primary">
-            <div class="card-header">
-              <h3 class="card-title">General</h3>
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
 
-              <div class="card-tools">
-                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                  <i class="fas fa-minus"></i>
-                </button>
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up the bulk of the card's
+                  content.
+                </p>
+
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
               </div>
             </div>
-            <div class="card-body">
-              <div class="form-group">
-                <label for="inputName"> Name</label>
-                <input type="text" id="inputName" class="form-control" name = "name">
+
+            <div class="card card-primary card-outline">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up the bulk of the card's
+                  content.
+                </p>
+                <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a>
               </div>
-              <div class="form-group">
-                <label for="inputStatus">Manufacture</label>
-                <select id="inputStatus" class="form-control custom-select" name = "manu">
-                  <option selected disabled>Select one</option>
-                  <?php $getAllManus = $manufacture->getAllManus();
-                  foreach($getAllManus as $value):
-                  ?>
-                  <option value=<?php echo $value['manu_id'] ?>>
-                  <?php echo $value['manu_name']?>
-                </option>
-                 <?php endforeach ?>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="inputStatus">Protype</label>
-                <select id="inputStatus" class="form-control custom-select" name ="type">
-                  <option selected disabled>Select one</option>
-                  <?php $getAllProtypes = $protype->getAllProtypes();
-                  foreach($getAllProtypes as $value):
-                 ?>
-                  <option value=<?php echo $value['type_id'] ?>><?php echo $value['type_name']?>
-                </option>
-                  <?php endforeach?>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="inputClientCompany">Price</label>
-                <input type="text" id="inputClientCompany" class="form-control" name = "price">
-              </div>
-              <div class="form-group">
-                <label for="inputClientCompany">Feature</label>
-                <input type="text" id="inputClientCompany" class="form-control" name = "feature">
-              </div>
-              <div class="form-group">
-                <label for="inputDescription">Desctription</label>
-                <textarea id="inputDescription" class="form-control" rows="4" name = "desc"></textarea>
-              </div>
-              <div class="form-group">
-                <label for="inputProjectLeader">Image</label>
-                <input type="file" name ="image" id="inputProjectLeader" class="form-control">
-              </div>
-            </div>
-            <!-- /.card-body -->
+            </div><!-- /.card -->
           </div>
-          <!-- /.card -->
+          <!-- /.col-md-6 -->
+          <div class="col-lg-6">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="m-0">Featured</h5>
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">Special title treatment</h6>
+
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+
+            <div class="card card-primary card-outline">
+              <div class="card-header">
+                <h5 class="m-0">Featured</h5>
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">Special title treatment</h6>
+
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <!-- /.col-md-6 -->
         </div>
-      </div>
-      <div class="row">
-        <div class="col-12">
-          <input name = "submit" type="submit" value="Create new Porject" class="btn btn-success float-right">
-        </div>
-      </div>
-      </form>
-    </section>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-
- <?php include "footer.html"?>
+  <?php include "footer.php" ?>
